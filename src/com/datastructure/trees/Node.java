@@ -1,7 +1,6 @@
 package com.datastructure.trees;
 
-public class Node<T>{
-
+public class Node<T> {
 	T data;
 	Node<T> left;
 	Node<T> right;
@@ -12,4 +11,9 @@ public class Node<T>{
 		this.right = null;
 	}
 
+	Node(T data, Node<T> left, Node<T> right) {
+		this.data = data;
+		this.left = left;
+		this.right = right;
+	}
 }
