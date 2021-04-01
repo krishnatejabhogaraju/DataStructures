@@ -3,10 +3,8 @@ package com.datastructure.trees;
 public class BinaryTree<T extends Comparable<T>> {
 
 	public void inOrderTraversal(Node<?> node) {
-
-        if (node == null)
-            return;
-		
+		if (node == null)
+			return;
 		inOrderTraversal(node.left);
 		System.out.println(" " + node.data);
 		inOrderTraversal(node.right);
@@ -41,7 +39,7 @@ public class BinaryTree<T extends Comparable<T>> {
 			return node;
 		} else {
 
-			if (data.compareTo((T)node.data) < 0) {
+			if (data.compareTo((T) node.data) < 0) {
 				node.left = addNode(node.left, data);
 			} else {
 				node.right = addNode(node.right, data);
@@ -49,5 +47,4 @@ public class BinaryTree<T extends Comparable<T>> {
 		}
 		return node;
 	}
-
 }
