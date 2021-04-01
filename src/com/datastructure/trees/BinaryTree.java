@@ -10,6 +10,22 @@ public class BinaryTree<T extends Comparable<T>> {
 		inOrderTraversal(node.right);
 	}
 
+	public void preOrderTraversal(Node<?> node) {
+		if (node == null)
+			return;
+		System.out.println(" " + node.data);
+		preOrderTraversal(node.left);
+		preOrderTraversal(node.right);
+	}
+
+	public void postOrderTraversal(Node<?> node) {
+		if (node == null)
+			return;
+		postOrderTraversal(node.left);
+		postOrderTraversal(node.right);
+		System.out.println(" " + node.data);
+	}
+
 	private boolean contains(Node<T> node, T data) {
 		if (node == null)
 			return false;
@@ -33,7 +49,6 @@ public class BinaryTree<T extends Comparable<T>> {
 	}
 
 	private Node<T> addNode(Node<T> node, T data) {
-
 		if (node == null) {
 			node = new Node<T>(data);
 			return node;
